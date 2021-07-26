@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<htm xmlns:th="http://thymeleaf.org" 
+     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+     
+ <head>
+
+       <title> CADASTRO DE VETERINARIO </title>
+       
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+ </head>
+
+    <body>   
+
+      <h1> CADASTRAR VETERINARIO </h1>
+      <H2> <a href="/veterinarios" class="waves-effect waves-light btn">LISTA DE VETERINARIOS</a></H2>
+      
+        <form class="container" method = "post">  
+        Nome:<input type="text"  value = "" name ="nome"/> 
+        Telefone:<input type="text"  value = "" name ="telefone"/> 
+        E-mail:<input type="text"  value = "" name ="email"/> 
+        
+        <button class="waves-effect waves-light btn" type="submit">  Salvar  </button> 
+          
+        </form>
+        
+         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+    </body>
+
+</html>

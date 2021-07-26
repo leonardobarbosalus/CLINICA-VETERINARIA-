@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<htm xmlns:th="http://thymeleaf.org" 
+     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+     
+      <head>
+
+       <title>  CLINICA  </title>
+      
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      </head>
+
+<body> 
+
+    <h3> CLINICA </h3>
+    <H3> <a href="cadastrarVeterinario" class="waves-effect waves-light btn">CADASTRAR VETERINARIO</a></H3>
+    
+     <table class ="container">
+    <thead>
+    
+    <tr>
+     <th> nome </th>
+     <th> telefone </th>
+     <th> E-mail </th>
+    </tr>
+    
+     </thead>
+    <body>
+      <tr   th:each = "veterinario:${veterinarios}" >
+    
+         <div class="row">
+         <td><span th:text="${veterinario.nome}" ></span></td>
+         <td><span th:text="${veterinario.telefone}" ></span></td>
+         <td><span th:text="${veterinario.email}" ></span></td>
+         <td> <a href = "@{'/alterar/' + ${veterinario.id}}"> Alterar </td>
+          <td> <a href = "@{'/excluir/' + ${veterinario.id}}"> Excluir </td>
+        </tr>
+     <body>    
+         
+     </table>
+
+     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+ </body>
+
+ </html>
